@@ -40,7 +40,7 @@ const Link = (props) => {
 
 const Header = () => {
   return (
-    <header class="p-16 pb-20 max-w-full w-[45rem] space-y-5">
+    <header class="p-8 md:p-16 md:pb-20 max-w-full w-[45rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
         <img
           class="w-12 animate-spin ease-in-out rounded-full"
@@ -83,7 +83,7 @@ const Header = () => {
 
 const Stats = () => {
   return (
-    <div class="p-16 pt-0 space-y-16">
+    <div class="p-8 md:p-16 pt-0 space-y-16">
       <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="animate-pulse w-32 text-gray-400">Projects</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
@@ -97,7 +97,7 @@ const Stats = () => {
 
       <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="animate-pulse w-32 text-gray-400">Work</div>
-        <div class="flex w-full gap-y-10 gap-x-20">
+        <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.work.map(({ name, description, link }) => (
             <div class="w-60">
               <Link href={link}>{name}</Link> <p>{description}</p>
@@ -122,7 +122,7 @@ const Stats = () => {
 
 const Footer = () => {
   return (
-    <footer class="p-16 pt-0 space-y-16">
+    <footer class="p-8 md:p-16 pt-0 space-y-16">
       <p class="italic">
         Want to hire me? Check out my{' '}
         <Link href="https://linkedin.com/in/aidenbai">LinkedIn</Link> ·{' '}
@@ -135,9 +135,9 @@ const Footer = () => {
 };
 
 const Content = () => {
-  const timer = <p class="my-auto ml-auto mr-16">0:00:00</p>;
+  const timer = <p class="my-auto ml-auto mr-8 md:mr-16">0:00:00</p>;
   createTimer(timer);
-  const spinner = <p class="my-auto ml-16 animate-pulse">PLAYING |</p>;
+  const spinner = <p class="my-auto ml-8 md:ml-16 animate-pulse">PLAYING |</p>;
   createSpinner(spinner);
 
   return (
@@ -157,7 +157,7 @@ const VCR = () => {
   const timer = <p class="text-5xl">0:00:00</p>;
   createTimer(timer);
   return (
-    <div class="absolute flex flex-col bg-blue-700 w-full text-5xl h-screen p-16 text-white font-mono transition-opacity duration-1000">
+    <div class="absolute flex flex-col bg-blue-700 w-full text-5xl h-screen p-8 md:p-16 text-white font-mono transition-opacity duration-1000">
       <div class="flex mb-auto animate-pulse">
         <button class="mr-auto">PLAY</button>
         <p>--:--</p>
