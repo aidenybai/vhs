@@ -88,7 +88,7 @@ const Stats = () => {
         <div class="animate-pulse w-32 text-gray-400">Projects</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.projects.map(({ name, description, link }) => (
-            <div class="w-60">
+            <div class="w-full md:w-60">
               <Link href={link}>{name}</Link> <p>{description}</p>
             </div>
           ))}
@@ -99,7 +99,7 @@ const Stats = () => {
         <div class="animate-pulse w-32 text-gray-400">Work</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.work.map(({ name, description, link }) => (
-            <div class="w-60">
+            <div class="w-full md:w-60">
               <Link href={link}>{name}</Link> <p>{description}</p>
             </div>
           ))}
@@ -110,7 +110,7 @@ const Stats = () => {
         <div class="animate-pulse w-32 text-gray-400">Awards</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.awards.map(({ name, description, link }) => (
-            <div class="w-60">
+            <div class="w-full md:w-60">
               <Link href={link}>{name}</Link> <p>{description}</p>
             </div>
           ))}
