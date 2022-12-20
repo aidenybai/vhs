@@ -17,12 +17,11 @@ const createTimer = (timer) => {
     timer.textContent = `${hours}:${minutes}:${seconds}`;
   }, 1);
 };
-let spinnerInterval;
 const createSpinner = (spinner) => {
   const time = ['|', '/', '-', '\\'];
   let i = 0;
 
-  spinnerInterval = setInterval(() => {
+  setInterval(() => {
     i += 1;
     spinner.textContent = `PLAYING ${time[i % time.length]}`;
   }, 1);
@@ -85,7 +84,7 @@ const Header = () => {
 const Stats = () => {
   return (
     <div class="p-16 pt-0 space-y-16">
-      <section class="flex gap-4">
+      <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="animate-pulse w-32 text-gray-400">Projects</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.projects.map(({ name, description, link }) => (
@@ -96,9 +95,9 @@ const Stats = () => {
         </div>
       </section>
 
-      <section class="flex gap-4">
+      <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="animate-pulse w-32 text-gray-400">Work</div>
-        <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
+        <div class="flex w-full gap-y-10 gap-x-20">
           {data.work.map(({ name, description, link }) => (
             <div class="w-60">
               <Link href={link}>{name}</Link> <p>{description}</p>
@@ -107,7 +106,7 @@ const Stats = () => {
         </div>
       </section>
 
-      <section class="flex gap-4">
+      <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="animate-pulse w-32 text-gray-400">Awards</div>
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.awards.map(({ name, description, link }) => (
@@ -164,7 +163,7 @@ const VCR = () => {
         <p>--:--</p>
       </div>
       <div class="flex animate-pulse">
-        <p class="mr-36">SLP</p>
+        <p class="mr-auto">SLP</p>
         {timer}
       </div>
     </div>
