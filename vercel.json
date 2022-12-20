@@ -1,0 +1,22 @@
+{
+  "github": {
+    "silent": true
+  },
+  "redirects": [
+    {
+      "source": "/work/million-js",
+      "destination": "https://millionjs.org/research",
+      "permanent": true
+    },
+    {
+      "source": "/thoughts/virtual-dom",
+      "destination": "https://site-mini.vercel.app/thoughts/virtual-dom",
+      "permanent": true
+    },
+    {
+      "source": "/thoughts/isef",
+      "destination": "https://site-mini.vercel.app/thoughts/isef",
+      "permanent": true
+    }
+  ]
+}
