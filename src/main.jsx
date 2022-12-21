@@ -317,7 +317,15 @@ if (!REDUCE_MOTION) {
       easing: 'ease-in-out',
     },
   });
+  let init = false;
   setTimeout(() => {
+    if (!init) {
+      document.getElementById('reminder').style.opacity = 1;
+    }
+  }, 1000);
+  document.addEventListener('click', () => {
+    if (init) return;
+    init = true;
     glitch1.stopGlitch();
     const glitch2 = PowerGlitch.glitch('.glitch', {
       glitchTimeSpan: false,
@@ -329,7 +337,7 @@ if (!REDUCE_MOTION) {
       vcr.style.display = 'none';
     }, 1000);
     content.style.display = 'flex';
-  }, Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000);
+  });
 } else {
   vcr.style.display = 'none';
   content.style.display = 'flex';
