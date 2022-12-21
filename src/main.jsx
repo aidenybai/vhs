@@ -67,7 +67,7 @@ const Header = () => {
   }, 10);
 
   return (
-    <header class="p-8 md:p-16 md:pb-0 max-w-full w-[55rem] space-y-5">
+    <header class="p-8 md:p-16 md:pb-0 max-w-full md:w-[55rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
         <img
           class="w-12 hover:animate-spin motion-reduce:animate-none ease-in-out rounded-full"
@@ -265,7 +265,7 @@ const Content = () => {
   });
 
   return (
-    <div class="hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
+    <div class="whitespace-normal hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
       <div class="transition-all sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 hover:h-16 text-white font-mono motion-reduce:transition-none duration-1000">
         {spinner}
         {timer}
