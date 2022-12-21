@@ -62,7 +62,7 @@ export const data = {
         <span>
           Published Million.js, with a{' '}
           <span class="font-medium text-gray-800">
-            &lt;20% acceptance rate among 500+ graduate students
+            &lt;20% acceptance rate among 800+ professional researchers
           </span>{' '}
           internationally.
         </span>
@@ -80,7 +80,7 @@ export const data = {
       link: 'https://www.societyforscience.org/press-release/regeneron-isef-full-awards-2022/#:~:text=SOFT037',
     },
     {
-      name: 'ACM SAC 2023',
+      name: 'ISEF 2021',
       description: (
         <span>
           <span class="font-medium text-gray-800">2nd place</span> in Systems
