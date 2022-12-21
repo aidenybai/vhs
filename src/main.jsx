@@ -55,7 +55,7 @@ const Link = (props) => {
 
 const Header = () => {
   return (
-    <header class="p-8 md:p-16 md:pb-20 max-w-full w-[45rem] space-y-5">
+    <header class="p-8 md:p-16 md:pb-0 max-w-full w-[55rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
         <img
           class="w-12 animate-spin motion-reduce:animate-none ease-in-out rounded-full"
@@ -73,10 +73,13 @@ const Header = () => {
         information equality.
       </p>
       <p>
-        Currently, I create open-source JavaScript libraries that
-        help web programmers make better websites for end users.
-        My hope is that one day, we'll be able to learn, create,
-        and collaborate faster on the web.
+        Currently, I{' '}
+        <Link href="https://github.com/aidenybai">
+          create open-source JavaScript libraries
+        </Link>{' '}
+        that help web programmers make better websites for end
+        users. My hope is that one day, we'll be able to learn,
+        create, and collaborate faster on the web.
       </p>
       <p>
         On the side, I like blasting music with my windows down
@@ -111,7 +114,7 @@ const Header = () => {
 
 const Stats = () => {
   return (
-    <div class="p-8 md:p-16 pt-0 space-y-16">
+    <div class="p-8 md:p-16 pb-0 pt-0 space-y-16">
       <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="italic animate-pulse motion-reduce:animate-none w-32 text-gray-400">
           Projects
@@ -217,14 +220,16 @@ const Content = () => {
   });
 
   return (
-    <div class="hidden text-xl bg-white text-gray-700 font-normal transition motion-reduce:transition-none">
+    <div class="hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
       <div class="sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 text-white font-mono transition-opacity motion-reduce:transition-none duration-1000">
         {spinner}
         {timer}
       </div>
-      <Header />
-      <Stats />
-      <Footer />
+      <div class="mx-auto">
+        <Header />
+        <Stats />
+        <Footer />
+      </div>
     </div>
   );
 };
@@ -269,9 +274,9 @@ if (REDUCE_MOTION) {
       glitch2.stopGlitch();
       vcr.style.display = 'none';
     }, 1000);
-    content.style.display = 'block';
+    content.style.display = 'flex';
   }, Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000);
 } else {
-  content.style.display = 'block';
+  content.style.display = 'flex';
 }
 root.appendChild(content);
