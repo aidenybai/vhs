@@ -196,7 +196,7 @@ const Stats = () => {
 
 const Footer = () => {
   return (
-    <footer class="p-8 md:p-16 md:pt-0 space-y-16">
+    <footer class="p-8 md:p-16 md:pt-0 space-y-8">
       <p class="italic">
         Want to hire me? Check out my{' '}
         <Link href="https://linkedin.com/in/aidenbai">
@@ -208,7 +208,7 @@ const Footer = () => {
         </Link>
         !
       </p>
-      <p class="italic">P.S. Try ejecting the page!</p>
+      <p class="italic text-gray-400">P.S. Try ejecting the page!</p>
     </footer>
   );
 };
