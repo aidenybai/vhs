@@ -249,6 +249,7 @@ const Content = () => {
 
       setTimeout(() => {
         document.body.textContent = '';
+        document.body.style.overflow = 'auto';
         const dvd = (
           <img class="dvd" src="/folder.png" draggable="false" />
         );
