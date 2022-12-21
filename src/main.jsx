@@ -6,6 +6,7 @@ const root = document.getElementById('root');
 const REDUCE_MOTION = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
 ).matches;
+const audio = new Audio('/effect.webm');
 
 let timerInterval;
 const createTimer = (timer, progress) => {
@@ -238,6 +239,7 @@ const Content = () => {
   if (!REDUCE_MOTION) {
     let count = 0;
     spinner.addEventListener('click', () => {
+      audio.cloneNode(true).play();
       document.body.className =
         'bg-black text-white font-mono flex items-center justify-center h-screen overflow-hidden';
       PowerGlitch.glitch('#root', {
@@ -258,7 +260,10 @@ const Content = () => {
           <button class="hover:underline">REWIND ⏮</button>
         );
         reload.addEventListener('click', () => {
-          location.reload();
+          audio.cloneNode(true).play();
+          setTimeout(() => {
+            location.reload();
+          }, 1000);
         });
         document.body.appendChild(
           <div class="text-center">
@@ -329,6 +334,7 @@ if (!REDUCE_MOTION) {
   }, 1000);
   document.addEventListener('click', () => {
     if (init) return;
+    audio.cloneNode(true).play();
     init = true;
     glitch1.stopGlitch();
     const glitch2 = PowerGlitch.glitch('.glitch', {
