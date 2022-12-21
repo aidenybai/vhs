@@ -108,7 +108,11 @@ const Header = () => {
         >
           fruit tea boba
         </span>
-        , and sampling chicken karage.
+        , and grinding{' '}
+        <Link href="https://www.stardewvalley.net/">
+          Stardew Valley
+        </Link>
+        .
       </p>
       <p class="italic">
         Want to reach out?{' '}
@@ -138,7 +142,7 @@ const Header = () => {
 
 const Stats = () => {
   return (
-    <div class="p-8 md:p-16 pb-0 pt-0 space-y-16">
+    <div class="p-8 md:p-16 pb-0 pt-0 space-y-8">
       <section class="flex flex-wrap md:flex-nowrap gap-4">
         <div class="italic animate-pulse motion-reduce:animate-none w-32 text-gray-400">
           Projects
@@ -240,13 +244,17 @@ const Content = () => {
         <img class="dvd" src="/folder.png" draggable="false" />
       );
       const display = (
-        <span class="text-3xl">{String(count)}</span>
+        <span>{String(count)}</span>
       );
       document.body.appendChild(
         <div class="text-center">
           {dvd}
-          <p>{spinner} EJECTED</p>
-          {display}
+          <p>{spinner}{display} EJECTED</p>
+          <p class="w-40 mt-10 text-gray-400">
+            I guess the sooner we come to terms with our
+            mortality, the more time we can spend really living
+            in the here-and-now.
+          </p>
         </div>
       );
       runDvd(dvd, () => {

@@ -62,7 +62,7 @@ export const data = {
         <span>
           Published Million.js, with a{' '}
           <span class="font-medium text-gray-800">
-            &lt;20% acceptance rate among 800+ professional researchers
+            &lt;25% acceptance rate among 800+ professional researchers
           </span>{' '}
           internationally.
         </span>
