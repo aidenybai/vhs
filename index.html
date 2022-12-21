@@ -38,10 +38,25 @@
     <title>Aiden Bai</title>
   </head>
   <body>
-    <div
-      id="root"
-      class="transition-opacity duration-1000"
-    ></div>
+    <div id="root" class="transition-opacity duration-1000">
+      <div
+        id="vcr"
+        class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl h-screen pb-32 p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500"
+      >
+        <div
+          class="flex justify-between mb-auto animate-pulse motion-reduce:animate-none"
+        >
+          <p class="glitch">PLAY ►</p>
+          <p class="glitch">--:--</p>
+        </div>
+        <div
+          class="flex justify-between animate-pulse motion-reduce:animate-none"
+          id="marker"
+        >
+          <p class="glitch">SP</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

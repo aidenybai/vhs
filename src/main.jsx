@@ -288,28 +288,14 @@ const Content = () => {
   );
 };
 
-const VCR = () => {
-  const timer = <p class="glitch">0:00:00</p>;
-  createTimer(timer);
-  return (
-    <div class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl h-screen pb-32 p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500">
-      <div class="flex justify-between mb-auto animate-pulse motion-reduce:animate-none">
-        <p class="glitch">PLAY ►</p>
-        <p class="glitch">--:--</p>
-      </div>
-      <div class="flex justify-between animate-pulse motion-reduce:animate-none">
-        <p class="glitch">SP</p>
-        {timer}
-      </div>
-    </div>
-  );
-};
-
 const content = <Content />;
 
 if (REDUCE_MOTION) {
-  const vcr = <VCR />;
-  root.appendChild(vcr);
+  const timer = <p class="glitch">0:00:00</p>;
+  const vcr = document.getElementById('vcr');
+  createTimer(timer);
+  document.getElementById('marker').appendChild(timer);
+
   const glitch1 = PowerGlitch.glitch('.glitch', {
     timing: {
       duration: 700,
