@@ -247,6 +247,12 @@ const Content = () => {
         <img class="dvd" src="/folder.png" draggable="false" />
       );
       const display = <span>{String(count)}</span>;
+      const reload = (
+        <button class="hover:underline">REWIND ⏮</button>
+      );
+      reload.addEventListener('click', () => {
+        location.reload();
+      });
       document.body.appendChild(
         <div class="text-center">
           {dvd}
@@ -254,7 +260,7 @@ const Content = () => {
             {spinner}
             {display} EJECTED
           </p>
-          <p class="mx-auto w-10/12 sm:w-80 mt-10 text-gray-400">
+          <p class="mx-auto w-10/12 sm:w-80 mt-5 text-gray-400">
             I guess the sooner we come to terms with our{' '}
             <span class="text-white hover:underline">
               <a href="https://www.pinterest.com/pin/480407485258299307/">
@@ -264,6 +270,7 @@ const Content = () => {
             , the more time we can spend really living in the
             here-and-now.
           </p>
+          <p class="mt-5">{reload}</p>
         </div>
       );
       runDvd(dvd, () => {
