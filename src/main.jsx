@@ -54,6 +54,18 @@ const Link = (props) => {
 };
 
 const Header = () => {
+  const BIRTHDAY = new Date('January 5, 2005').getTime();
+  const calc = () => {
+    const diff = new Date().getTime() - BIRTHDAY;
+    return (diff / 1000 / 60 / 60 / 24 / 365).toFixed(9);
+  };
+
+  const age = <span class="font-mono">{calc()}</span>;
+
+  setInterval(() => {
+    age.textContent = calc();
+  }, 10);
+
   return (
     <header class="p-8 md:p-16 md:pb-0 max-w-full w-[55rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
@@ -66,11 +78,13 @@ const Header = () => {
         />
         Aiden Bai
       </h4>
-      <p>I'm a 17 y/o high school student from the USA. </p>
+      <p>I'm a {age} y/o high school student from the USA. </p>
       <p>
-        My current research focuses on the intersection between
-        human-computer interaction, web frameworks, and
-        information equality.
+        My current research focuses on the intersection between{' '}
+        <Link href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">
+          human-computer interaction
+        </Link>
+        , web frameworks, and information equality.
       </p>
       <p>
         Currently, I{' '}
@@ -79,12 +93,22 @@ const Header = () => {
         </Link>{' '}
         that help web programmers make better websites for end
         users. My hope is that one day, we'll be able to learn,
-        create, and collaborate faster on the web.
+        create, and collaborate{' '}
+        <span class="italic">faster</span> on the web.
       </p>
       <p>
-        On the side, I like blasting music with my windows down
-        on the highway, chugging fruit tea boba, and sampling
-        chicken karage.
+        On the side, I like{' '}
+        <a href="https://open.spotify.com/user/pc8oiwotonvqvkw61vimh0kks">
+          blasting music
+        </a>{' '}
+        with my windows down on the highway, chugging{' '}
+        <span
+          class="italic"
+          title="Mango Kiwi with Lichee Jelly!"
+        >
+          fruit tea boba
+        </span>
+        , and sampling chicken karage.
       </p>
       <p class="italic">
         Want to reach out?{' '}
@@ -122,7 +146,9 @@ const Stats = () => {
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.projects.map(({ name, description, link }) => (
             <div class="w-full md:w-60">
-              <Link href={link}>{name}</Link>{' '}
+              <p class="font-mono">
+                <Link href={link}>{name}</Link>
+              </p>{' '}
               <p>{description}</p>
             </div>
           ))}
@@ -136,7 +162,9 @@ const Stats = () => {
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.work.map(({ name, description, link }) => (
             <div class="w-full md:w-60">
-              <Link href={link}>{name}</Link>{' '}
+              <p class="font-mono">
+                <Link href={link}>{name}</Link>
+              </p>{' '}
               <p>{description}</p>
             </div>
           ))}
@@ -150,7 +178,9 @@ const Stats = () => {
         <div class="flex flex-wrap w-full gap-y-10 gap-x-20">
           {data.awards.map(({ name, description, link }) => (
             <div class="w-full md:w-60">
-              <Link href={link}>{name}</Link>{' '}
+              <p class="font-mono">
+                <Link href={link}>{name}</Link>
+              </p>{' '}
               <p>{description}</p>
             </div>
           ))}
@@ -193,6 +223,7 @@ const Content = () => {
   );
   createSpinner(spinner, true);
 
+  let count = 0;
   spinner.addEventListener('click', () => {
     document.body.className =
       'bg-black text-white font-mono flex items-center justify-center h-screen overflow-hidden';
@@ -205,16 +236,18 @@ const Content = () => {
 
     setTimeout(() => {
       document.body.textContent = '';
-      const dvd = <img class="dvd" src="/folder.png" />;
+      const dvd = <img class="dvd" src="/folder.png" draggable="false" />;
+      const display = <span class="text-3xl">{String(count)}</span>;
       document.body.appendChild(
         <div class="text-center">
           {dvd}
           <p>{spinner} EJECTED</p>
+          {display}
         </div>
       );
-      runDvd(dvd);
-      dvd.addEventListener('click', () => {
-        window.location.reload();
+      runDvd(dvd, () => {
+        count++;
+        display.textContent = String(count);
       });
     }, 1000);
   });
@@ -235,10 +268,10 @@ const Content = () => {
 };
 
 const VCR = () => {
-  const timer = <p class="text-5xl glitch">0:00:00</p>;
+  const timer = <p class="glitch">0:00:00</p>;
   createTimer(timer);
   return (
-    <div class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-5xl h-screen p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500">
+    <div class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl h-screen p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500">
       <div class="flex justify-between mb-auto animate-pulse motion-reduce:animate-none">
         <p class="glitch">PLAY ►</p>
         <p class="glitch">--:--</p>
