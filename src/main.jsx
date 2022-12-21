@@ -196,7 +196,7 @@ const Stats = () => {
 
 const Footer = () => {
   return (
-    <footer class="p-8 md:p-16 pt-0 space-y-16">
+    <footer class="p-8 md:p-16 md:pt-0 space-y-16">
       <p class="italic">
         Want to hire me? Check out my{' '}
         <Link href="https://linkedin.com/in/aidenbai">
@@ -208,6 +208,7 @@ const Footer = () => {
         </Link>
         !
       </p>
+      <p class="italic">P.S. Try ejecting the page!</p>
     </footer>
   );
 };
@@ -243,17 +244,18 @@ const Content = () => {
       const dvd = (
         <img class="dvd" src="/folder.png" draggable="false" />
       );
-      const display = (
-        <span>{String(count)}</span>
-      );
+      const display = <span>{String(count)}</span>;
       document.body.appendChild(
         <div class="text-center">
           {dvd}
-          <p>{spinner}{display} EJECTED</p>
+          <p>
+            {spinner}
+            {display} EJECTED
+          </p>
           <p class="mx-auto w-10/12 sm:w-80 mt-10 text-gray-400">
             I guess the sooner we come to terms with our{' '}
-            <span class="text-white">mortality</span>, the more time we can spend really living
-            in the here-and-now.
+            <span class="text-white">mortality</span>, the more
+            time we can spend really living in the here-and-now.
           </p>
         </div>
       );
@@ -283,7 +285,7 @@ const VCR = () => {
   const timer = <p class="glitch">0:00:00</p>;
   createTimer(timer);
   return (
-    <div class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl h-screen p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500">
+    <div class="absolute flex flex-col bg-blue-700 pointer-events-none w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl h-screen pb-32 p-8 md:p-16 text-white font-mono motion-reduce:transition-none transition-opacity duration-500">
       <div class="flex justify-between mb-auto animate-pulse motion-reduce:animate-none">
         <p class="glitch">PLAY ►</p>
         <p class="glitch">--:--</p>
