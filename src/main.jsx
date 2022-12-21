@@ -5,7 +5,7 @@ import { PowerGlitch } from 'powerglitch';
 const root = document.getElementById('root');
 const REDUCE_MOTION = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
-);
+).matches;
 
 let timerInterval;
 const createTimer = (timer, progress) => {
@@ -208,9 +208,13 @@ const Footer = () => {
         </Link>
         !
       </p>
-      <p class="italic text-gray-400">
-        P.S. Try ejecting the page!
-      </p>
+      {!REDUCE_MOTION ? (
+        <p class="italic text-gray-400">
+          P.S. Try ejecting the page!
+        </p>
+      ) : (
+        <p></p>
+      )}
     </footer>
   );
 };
@@ -225,60 +229,63 @@ const Content = () => {
 
   const spinner = (
     <p class="transition w-full ml-8 my-auto md:ml-16 whitespace-nowrap animate-pulse motion-reduce:animate-none hover:animate-none hover:text-gray-300">
-      | EJECT ⏏
+      |
     </p>
   );
-  createSpinner(spinner, true);
 
-  let count = 0;
-  spinner.addEventListener('click', () => {
-    document.body.className =
-      'bg-black text-white font-mono flex items-center justify-center h-screen overflow-hidden';
-    PowerGlitch.glitch('#root', {
-      glitchTimeSpan: false,
+  createSpinner(spinner, !REDUCE_MOTION);
+
+  if (!REDUCE_MOTION) {
+    let count = 0;
+    spinner.addEventListener('click', () => {
+      document.body.className =
+        'bg-black text-white font-mono flex items-center justify-center h-screen overflow-hidden';
+      PowerGlitch.glitch('#root', {
+        glitchTimeSpan: false,
+      });
+
+      const spinner = <span>|</span>;
+      createSpinner(spinner);
+
+      setTimeout(() => {
+        document.body.textContent = '';
+        const dvd = (
+          <img class="dvd" src="/folder.png" draggable="false" />
+        );
+        const display = <span>{String(count)}</span>;
+        const reload = (
+          <button class="hover:underline">REWIND ⏮</button>
+        );
+        reload.addEventListener('click', () => {
+          location.reload();
+        });
+        document.body.appendChild(
+          <div class="text-center">
+            {dvd}
+            <p>
+              {spinner}
+              {display} EJECTED
+            </p>
+            <p class="mx-auto w-10/12 sm:w-80 mt-5 text-gray-400">
+              I guess the sooner we come to terms with our{' '}
+              <span class="text-white hover:underline">
+                <a href="https://www.pinterest.com/pin/480407485258299307/">
+                  mortality
+                </a>
+              </span>
+              , the more time we can spend really living in the
+              here-and-now.
+            </p>
+            <p class="mt-5">{reload}</p>
+          </div>
+        );
+        runDvd(dvd, () => {
+          count++;
+          display.textContent = String(count);
+        });
+      }, 1000);
     });
-
-    const spinner = <span>|</span>;
-    createSpinner(spinner);
-
-    setTimeout(() => {
-      document.body.textContent = '';
-      const dvd = (
-        <img class="dvd" src="/folder.png" draggable="false" />
-      );
-      const display = <span>{String(count)}</span>;
-      const reload = (
-        <button class="hover:underline">REWIND ⏮</button>
-      );
-      reload.addEventListener('click', () => {
-        location.reload();
-      });
-      document.body.appendChild(
-        <div class="text-center">
-          {dvd}
-          <p>
-            {spinner}
-            {display} EJECTED
-          </p>
-          <p class="mx-auto w-10/12 sm:w-80 mt-5 text-gray-400">
-            I guess the sooner we come to terms with our{' '}
-            <span class="text-white hover:underline">
-              <a href="https://www.pinterest.com/pin/480407485258299307/">
-                mortality
-              </a>
-            </span>
-            , the more time we can spend really living in the
-            here-and-now.
-          </p>
-          <p class="mt-5">{reload}</p>
-        </div>
-      );
-      runDvd(dvd, () => {
-        count++;
-        display.textContent = String(count);
-      });
-    }, 1000);
-  });
+  }
 
   return (
     <div class="whitespace-normal hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
@@ -295,11 +302,11 @@ const Content = () => {
   );
 };
 
+const vcr = document.getElementById('vcr');
 const content = <Content />;
 
-if (REDUCE_MOTION) {
+if (!REDUCE_MOTION) {
   const timer = <p class="glitch">0:00:00</p>;
-  const vcr = document.getElementById('vcr');
   createTimer(timer);
   document.getElementById('marker').appendChild(timer);
 
@@ -324,6 +331,7 @@ if (REDUCE_MOTION) {
     content.style.display = 'flex';
   }, Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000);
 } else {
+  vcr.style.display = 'none';
   content.style.display = 'flex';
 }
 root.appendChild(content);
