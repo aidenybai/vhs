@@ -250,9 +250,9 @@ const Content = () => {
         <div class="text-center">
           {dvd}
           <p>{spinner}{display} EJECTED</p>
-          <p class="w-40 mt-10 text-gray-400">
+          <p class="mx-auto w-10/12 sm:w-80 mt-10 text-gray-400">
             I guess the sooner we come to terms with our
-            mortality, the more time we can spend really living
+            <span class="text-white">mortality</span>, the more time we can spend really living
             in the here-and-now.
           </p>
         </div>
