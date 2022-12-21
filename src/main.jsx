@@ -310,10 +310,12 @@ if (!REDUCE_MOTION) {
   createTimer(timer);
   document.getElementById('marker').appendChild(timer);
 
+  const glitch0 = PowerGlitch.glitch('.overlay', {
+    glitchTimeSpan: false,
+  });
   const glitch1 = PowerGlitch.glitch('.glitch', {
     timing: {
       duration: 700,
-      iterations: 25,
       easing: 'ease-in-out',
     },
   });
@@ -322,6 +324,7 @@ if (!REDUCE_MOTION) {
     if (!init) {
       document.getElementById('reminder').style.opacity = 1;
     }
+    glitch0.stopGlitch();
   }, 1000);
   document.addEventListener('click', () => {
     if (init) return;
@@ -333,6 +336,7 @@ if (!REDUCE_MOTION) {
     clearInterval(timerInterval);
     vcr.style.opacity = 0;
     setTimeout(() => {
+      document.body.style.overflow = 'auto';
       glitch2.stopGlitch();
       vcr.style.display = 'none';
     }, 1000);
@@ -341,5 +345,6 @@ if (!REDUCE_MOTION) {
 } else {
   vcr.style.display = 'none';
   content.style.display = 'flex';
+  document.body.style.overflow = 'auto';
 }
 root.appendChild(content);
