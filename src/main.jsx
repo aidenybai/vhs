@@ -228,7 +228,7 @@ const Content = () => {
   createTimer(timer, true);
 
   const spinner = (
-    <p class="transition w-full ml-8 my-auto md:ml-16 whitespace-nowrap animate-pulse motion-reduce:animate-none hover:animate-none hover:text-gray-300">
+    <p class="transition w-full ml-8 my-auto md:ml-16 whitespace-nowrap animate-pulse motion-reduce:animate-none hover:animate-none hover:underline">
       |
     </p>
   );
@@ -289,7 +289,7 @@ const Content = () => {
 
   return (
     <div class="whitespace-normal hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
-      <div class="transition-all sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 hover:h-16 text-white font-mono motion-reduce:transition-none duration-1000">
+      <div class="transition-all sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 hover:h-12 text-white font-mono motion-reduce:transition-none duration-1000">
         {spinner}
         {timer}
       </div>
