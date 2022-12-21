@@ -70,7 +70,7 @@ const Header = () => {
     <header class="p-8 md:p-16 md:pb-0 max-w-full w-[55rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
         <img
-          class="w-12 animate-spin motion-reduce:animate-none ease-in-out rounded-full"
+          class="w-12 hover:animate-spin motion-reduce:animate-none ease-in-out rounded-full"
           src="/head.png"
           loading="lazy"
           decoding="async"
@@ -217,7 +217,7 @@ const Content = () => {
   createTimer(timer, true);
 
   const spinner = (
-    <p class="w-full ml-8 my-auto md:ml-16 whitespace-nowrap animate-pulse motion-reduce:animate-none">
+    <p class="transition w-full ml-8 my-auto md:ml-16 whitespace-nowrap animate-pulse motion-reduce:animate-none hover:animate-none hover:text-gray-300">
       | EJECT ⏏
     </p>
   );
@@ -236,8 +236,12 @@ const Content = () => {
 
     setTimeout(() => {
       document.body.textContent = '';
-      const dvd = <img class="dvd" src="/folder.png" draggable="false" />;
-      const display = <span class="text-3xl">{String(count)}</span>;
+      const dvd = (
+        <img class="dvd" src="/folder.png" draggable="false" />
+      );
+      const display = (
+        <span class="text-3xl">{String(count)}</span>
+      );
       document.body.appendChild(
         <div class="text-center">
           {dvd}
@@ -254,7 +258,7 @@ const Content = () => {
 
   return (
     <div class="hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
-      <div class="sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 text-white font-mono transition-opacity motion-reduce:transition-none duration-1000">
+      <div class="transition-all sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 hover:h-16 text-white font-mono motion-reduce:transition-none duration-1000">
         {spinner}
         {timer}
       </div>
