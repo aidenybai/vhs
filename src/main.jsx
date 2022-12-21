@@ -98,9 +98,9 @@ const Header = () => {
       </p>
       <p>
         On the side, I like{' '}
-        <a href="https://open.spotify.com/user/pc8oiwotonvqvkw61vimh0kks">
+        <Link href="https://open.spotify.com/user/pc8oiwotonvqvkw61vimh0kks">
           blasting music
-        </a>{' '}
+        </Link>{' '}
         with my windows down on the highway, chugging{' '}
         <span
           class="italic"
