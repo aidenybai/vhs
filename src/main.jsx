@@ -251,7 +251,7 @@ const Content = () => {
           {dvd}
           <p>{spinner}{display} EJECTED</p>
           <p class="mx-auto w-10/12 sm:w-80 mt-10 text-gray-400">
-            I guess the sooner we come to terms with our
+            I guess the sooner we come to terms with our{' '}
             <span class="text-white">mortality</span>, the more time we can spend really living
             in the here-and-now.
           </p>
