@@ -46,13 +46,13 @@ export const data = {
           <span class="font-medium text-gray-800">3M+ users.</span>
         </span>
       ),
-      link: 'https://kbowl.aidenybai.com',
+      link: 'https://wyze.com',
     },
     {
       name: 'Remake',
       description:
         'Summer 2021 Software Engineering Internship, refactored web framework performance.',
-      link: 'https://kbowl.aidenybai.com',
+      link: 'https://remaketheweb.com',
     },
   ],
   awards: [

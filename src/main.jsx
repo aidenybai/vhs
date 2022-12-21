@@ -108,7 +108,7 @@ const Header = () => {
         >
           fruit tea boba
         </span>
-        , and grinding{' '}
+        , and fishing in{' '}
         <Link href="https://www.stardewvalley.net/">
           Stardew Valley
         </Link>
@@ -208,7 +208,9 @@ const Footer = () => {
         </Link>
         !
       </p>
-      <p class="italic text-gray-400">P.S. Try ejecting the page!</p>
+      <p class="italic text-gray-400">
+        P.S. Try ejecting the page!
+      </p>
     </footer>
   );
 };
@@ -254,8 +256,13 @@ const Content = () => {
           </p>
           <p class="mx-auto w-10/12 sm:w-80 mt-10 text-gray-400">
             I guess the sooner we come to terms with our{' '}
-            <span class="text-white">mortality</span>, the more
-            time we can spend really living in the here-and-now.
+            <span class="text-white hover:underline">
+              <a href="https://www.pinterest.com/pin/480407485258299307/">
+                mortality
+              </a>
+            </span>
+            , the more time we can spend really living in the
+            here-and-now.
           </p>
         </div>
       );
