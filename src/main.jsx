@@ -202,12 +202,17 @@ const Content = () => {
 
     setTimeout(() => {
       document.body.textContent = '';
+      const dvd = <img class="dvd" src="/folder.png" />;
       document.body.appendChild(
         <div class="text-center">
-          <p id="dvd">{spinner} EJECTED</p>
+          {dvd}
+          <p>{spinner} EJECTED</p>
         </div>
       );
-      runDvd();
+      runDvd(dvd);
+      dvd.addEventListener('click', () => {
+        window.location.reload();
+      });
     }, 1000);
   });
 

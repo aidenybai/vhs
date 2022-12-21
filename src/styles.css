@@ -142,12 +142,12 @@
   }
 }
 
-#dvd {
+.dvd {
   position: absolute;
   left: 0px;
   top: 0px;
-  height: 50px;
-  width: 100px;
+  height: 62px;
+  width: 73px;
   background-repeat: no-repeat;
   background-size: 75px;
   background-position: center;
