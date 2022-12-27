@@ -8,6 +8,15 @@ export default defineConfig({
       dom: './jsx-runtime.js',
     },
   },
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        index: new URL('./index.html', import.meta.url).pathname,
+        isef: new URL('./isef.html', import.meta.url).pathname,
+      },
+    },
+  },
   plugins: [
     babel({
       babelConfig: {
