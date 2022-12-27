@@ -13,7 +13,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: new URL('./index.html', import.meta.url).pathname,
-        isef: new URL('./isef.html', import.meta.url).pathname,
+        advice: new URL('./advice.html', import.meta.url).pathname,
       },
     },
   },
