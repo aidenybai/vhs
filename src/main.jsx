@@ -55,9 +55,9 @@ const Link = (props) => {
 };
 
 const Header = () => {
-  const BIRTHDAY = new Date('January 5, 2005').getTime();
+  const BIRTHDAY = +new Date('2005-01-05');
   const calc = () => {
-    const diff = new Date().getTime() - BIRTHDAY;
+    const diff = Date.now() - BIRTHDAY;
     return (diff / 1000 / 60 / 60 / 24 / 365).toFixed(9);
   };
 
