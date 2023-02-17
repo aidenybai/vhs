@@ -81,14 +81,12 @@ const Header = () => {
       </h4>
       <p>I'm a {age} y/o high school student from the USA. </p>
       <p>
-        My current research focuses on the intersection between{' '}
-        <Link href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">
-          human-computer interaction
-        </Link>
-        , web frameworks, and information equality.
+        Right now, I'm building a more integrated software
+        development experience for engineering teams at{' '}
+        <Link href="https://dimension.dev">dimension.dev</Link>
       </p>
       <p>
-        Currently, I{' '}
+        On the side, I{' '}
         <Link href="https://github.com/aidenybai">
           create open-source JavaScript libraries
         </Link>{' '}
@@ -98,7 +96,7 @@ const Header = () => {
         <span class="italic">faster</span> on the web.
       </p>
       <p>
-        On the side, I like{' '}
+        For fun, I like{' '}
         <Link href="https://open.spotify.com/user/pc8oiwotonvqvkw61vimh0kks">
           blasting music
         </Link>{' '}
