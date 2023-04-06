@@ -4,10 +4,13 @@ export const data = {
       name: 'Million.js',
       description: (
         <span>
-          <span class="font-medium text-gray-800">11x faster</span>{' '}
-          replacement for React.js with a lightweight (&lt;1kb)
-          Virtual DOM.{' '}
-          <span class="font-medium text-gray-800">5.4k+ GitHub stars.</span>
+          An extremely fast virtual DOM that makes React up to
+          <span class="font-medium text-gray-800">
+            70% faster!
+          </span>{' '}
+          <span class="font-medium text-gray-800">
+            6.1k+ GitHub stars.
+          </span>
         </span>
       ),
       link: 'https://millionjs.org',
@@ -18,7 +21,9 @@ export const data = {
         <span>
           3kb JavaScript library to augment HTML with JavaScript
           sprinkles.{' '}
-          <span class="font-medium text-gray-800">600+ GitHub stars.</span>
+          <span class="font-medium text-gray-800">
+            700+ GitHub stars.
+          </span>
         </span>
       ),
       link: 'https://lucia.js.org',
@@ -38,12 +43,24 @@ export const data = {
   ],
   work: [
     {
+      name: 'Dimension',
+      description: (
+        <span>
+          Spring 2023 Software Engineering role, build fast user
+          interfaces for open-source projects.
+        </span>
+      ),
+      link: 'https://dimension.dev',
+    },
+    {
       name: 'Wyze Labs',
       description: (
         <span>
           Summer 2022 Software Engineering Internship, built web
           solutions for{' '}
-          <span class="font-medium text-gray-800">3M+ users.</span>
+          <span class="font-medium text-gray-800">
+            3M+ users.
+          </span>
         </span>
       ),
       link: 'https://wyze.com',
@@ -62,9 +79,13 @@ export const data = {
         <span>
           Published Million.js, with a{' '}
           <span class="font-medium text-gray-800">
-            &lt;25% acceptance rate among 800+ professional researchers
+            &lt;25% acceptance rate
           </span>{' '}
-          internationally.
+          internationally (ranked{' '}
+          <span class="font-medium text-gray-800">
+            Best Paper
+          </span>{' '}
+          (top 2.5%))
         </span>
       ),
       link: 'https://www.sigapp.org/sac/sac2023/',
@@ -73,8 +94,11 @@ export const data = {
       name: 'ISEF 2022',
       description: (
         <span>
-          <span class="font-medium text-gray-800">3rd place</span> in Systems
-          Software with Million.js out of 1.8k+ finalists.
+          <span class="font-medium text-gray-800">
+            3rd place
+          </span>{' '}
+          in Systems Software with Million.js out of 1.8k+
+          finalists.
         </span>
       ),
       link: 'https://www.societyforscience.org/press-release/regeneron-isef-full-awards-2022/#:~:text=SOFT037',
@@ -83,8 +107,11 @@ export const data = {
       name: 'ISEF 2021',
       description: (
         <span>
-          <span class="font-medium text-gray-800">2nd place</span> in Systems
-          Software with Lucia.js out of 1.8k+ finalists.
+          <span class="font-medium text-gray-800">
+            2nd place
+          </span>{' '}
+          in Systems Software with Lucia.js out of 1.8k+
+          finalists.
         </span>
       ),
       link: 'https://www.societyforscience.org/press-release/2021-regeneron-isef-grand-awards/#:~:text=SOFT031',

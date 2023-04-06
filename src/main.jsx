@@ -83,7 +83,7 @@ const Header = () => {
       <p>
         Right now, I'm building a more integrated software
         development experience for engineering teams at{' '}
-        <Link href="https://dimension.dev">dimension.dev</Link>
+        <Link href="https://dimension.dev">dimension.dev</Link>.
       </p>
       <p>
         On the side, I{' '}
