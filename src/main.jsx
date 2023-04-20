@@ -55,18 +55,6 @@ const Link = (props) => {
 };
 
 const Header = () => {
-  const BIRTHDAY = +new Date('2005-01-05');
-  const calc = () => {
-    const diff = Date.now() - BIRTHDAY;
-    return (diff / 1000 / 60 / 60 / 24 / 365).toFixed(9);
-  };
-
-  const age = <span class="font-mono">{calc()}</span>;
-
-  setInterval(() => {
-    age.textContent = calc();
-  }, 10);
-
   return (
     <header class="p-8 md:p-16 md:pb-0 max-w-full md:w-[55rem] space-y-5">
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
@@ -79,7 +67,6 @@ const Header = () => {
         />
         Aiden Bai
       </h4>
-      <p>I'm a {age} y/o high school student from the USA. </p>
       <p>
         Right now, I'm building a more integrated software
         development experience for engineering teams at{' '}

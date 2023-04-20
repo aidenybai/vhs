@@ -4,12 +4,12 @@ export const data = {
       name: 'Million.js',
       description: (
         <span>
-          An extremely fast virtual DOM that makes React up to
+         The Virtual DOM Replacement for React (up to
           <span class="font-medium text-gray-800">
             70% faster!
-          </span>{' '}
+          </span>){' '}
           <span class="font-medium text-gray-800">
-            6.1k+ GitHub stars.
+            6.3k+ GitHub stars.
           </span>
         </span>
       ),
