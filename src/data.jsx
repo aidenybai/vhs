@@ -9,7 +9,7 @@ export const data = {
             70% faster!
           </span>){' '}
           <span class="font-medium text-gray-800">
-            6.3k+ GitHub stars.
+            7.1k+ GitHub stars.
           </span>
         </span>
       ),

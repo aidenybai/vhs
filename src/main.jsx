@@ -60,7 +60,7 @@ const Header = () => {
       <h4 class="flex gap-2 items-center text-2xl font-black text-black">
         <img
           class="w-12 hover:animate-spin motion-reduce:animate-none ease-in-out rounded-full"
-          src="/head.png"
+          src="/head.jpeg"
           loading="lazy"
           decoding="async"
           alt="Headshot"
@@ -68,9 +68,7 @@ const Header = () => {
         Aiden Bai
       </h4>
       <p>
-        Right now, I'm building a more integrated software
-        development experience for engineering teams at{' '}
-        <Link href="https://dimension.dev">dimension.dev</Link>.
+        Right now, I'm building [Million.js](https://millionjs.org): the virtual DOM replacement for React.
       </p>
       <p>
         On the side, I{' '}
