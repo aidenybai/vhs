@@ -68,7 +68,9 @@ const Header = () => {
         Aiden Bai
       </h4>
       <p>
-        Right now, I'm building [Million.js](https://millionjs.org): the virtual DOM replacement for React.
+        Right now, I'm building{' '}
+        <Link href="https://millionjs.org">Million.js</Link>: the
+        virtual DOM replacement for React.
       </p>
       <p>
         On the side, I{' '}
