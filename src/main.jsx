@@ -88,10 +88,7 @@ const Header = () => {
           blasting music
         </Link>{' '}
         with my windows down on the highway, chugging{' '}
-        <span
-          class="italic"
-          title="Mango Kiwi with Lichee Jelly!"
-        >
+        <span title="Mango Kiwi with Lichee Jelly!">
           fruit tea boba
         </span>
         , and fishing in{' '}
@@ -317,7 +314,7 @@ if (!REDUCE_MOTION) {
     }
     glitch0.stopGlitch();
   }, 1000);
-  document.addEventListener('click', () => {
+  const start = () => {
     if (init) return;
     audio.cloneNode(true).play();
     init = true;
@@ -333,7 +330,8 @@ if (!REDUCE_MOTION) {
       vcr.style.display = 'none';
     }, 1000);
     content.style.display = 'flex';
-  });
+  };
+  document.addEventListener('click', start);
 } else {
   vcr.style.display = 'none';
   content.style.display = 'flex';

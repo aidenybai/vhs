@@ -4,10 +4,11 @@ export const data = {
       name: 'Million.js',
       description: (
         <span>
-         The Virtual DOM Replacement for React (up to
+          The Virtual DOM Replacement for React (up to{' '}
           <span class="font-medium text-gray-800">
             70% faster!
-          </span>){' '}
+          </span>
+          ).{' '}
           <span class="font-medium text-gray-800">
             7.1k+ GitHub stars.
           </span>
