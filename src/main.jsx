@@ -68,18 +68,17 @@ const Header = () => {
         Aiden Bai
       </h4>
       <p>
-        Right now, I'm building{' '}
-        <Link href="https://millionjs.org">Million.js</Link>: the
-        virtual DOM replacement for React.
+        Hi! I'm a student studying Computer Science at the{' '}
+        <Link href="https://www.uw.edu/">
+          University of Washington
+        </Link>
+        .
       </p>
       <p>
-        On the side, I{' '}
-        <Link href="https://github.com/aidenybai">
-          create open-source JavaScript libraries
-        </Link>{' '}
-        that help web programmers make better websites for end
-        users. My hope is that one day, we'll be able to learn,
-        create, and collaborate{' '}
+        Right now, I'm building{' '}
+        <Link href="https://millionjs.org">Million.js</Link>: the
+        virtual DOM replacement for React. My hope is that one
+        day, we'll be able to learn, create, and collaborate{' '}
         <span class="italic">faster</span> on the web.
       </p>
       <p>
@@ -91,7 +90,7 @@ const Header = () => {
         <span title="Mango Kiwi with Lichee Jelly!">
           fruit tea boba
         </span>
-        , and fishing in{' '}
+        , giggling over capybaras ʕ•ᴥ•ʔ, and fishing in{' '}
         <Link href="https://www.stardewvalley.net/">
           Stardew Valley
         </Link>
