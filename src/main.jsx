@@ -234,7 +234,7 @@ const Content = () => {
         document.body.textContent = '';
         document.body.style.overflow = 'hidden';
         const dvd = (
-          <img class="dvd" src="/folder.png" draggable="false" />
+          <img class="dvd" src="/capy.gif" draggable="false" />
         );
         const display = <span>{String(count)}</span>;
         const reload = (

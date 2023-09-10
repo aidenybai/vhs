@@ -7,7 +7,7 @@ export const runDvd = (dvd, cb) => {
   const dvdWidth = dvd.clientWidth;
   const dvdHeight = dvd.clientHeight;
   dvd.addEventListener('mouseover', () => {
-    speed += 1;
+    speed += 0.25;
   });
 
   function getNewRandomColor() {
@@ -29,6 +29,7 @@ export const runDvd = (dvd, cb) => {
     }
     x += dirX * speed;
     y += dirY * speed;
+    dvd.style.animation = `spin ${16 / speed}s linear infinite`;
     dvd.style.left = `${x}px`;
     dvd.style.top = `${y}px`;
     window.requestAnimationFrame(animate);
