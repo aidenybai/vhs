@@ -6,7 +6,7 @@ export const data = {
         <span>
           Make React 70% Faster. The Virtual DOM Replacement For React{' '}
           <span class="font-medium text-gray-800">
-            12.7k+ GitHub stars.
+            13.6k+ GitHub stars.
           </span>
         </span>
       ),

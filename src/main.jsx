@@ -68,18 +68,19 @@ const Header = () => {
         Aiden Bai
       </h4>
       <p>
-        Hi! I'm a student studying Computer Science at the{' '}
+        Right now, I'm building{' '}
+        <Link href="https://million.dev">Million.js</Link> <Link href="https://www.ycombinator.com/companies/million-js">(YC W24)</Link>: The
+        copilot for web performance. My hope is that one day,
+        we'll be able to learn, create, and collaborate{' '}
+        <span class="italic">faster</span> on the web.
+      </p>
+      <p>
+        I'm also a <strike>serial lecture skipper</strike> student at the
+        Computer Science at the{' '}
         <Link href="https://www.uw.edu/">
           University of Washington
         </Link>
-        .
-      </p>
-      <p>
-        Right now, I'm building{' '}
-        <Link href="https://millionjs.org">Million.js</Link>: the
-        virtual DOM replacement for React. My hope is that one
-        day, we'll be able to learn, create, and collaborate{' '}
-        <span class="italic">faster</span> on the web.
+        &nbsp;(currently on leave)
       </p>
       <p>
         For fun, I like{' '}
@@ -179,7 +180,7 @@ const Stats = () => {
 const Footer = () => {
   return (
     <footer class="p-8 md:p-16 md:pt-0 space-y-8">
-      <p class="italic">
+      {/* <p class="italic">
         Want to hire me? Check out my{' '}
         <Link href="https://linkedin.com/in/aidenbai">
           LinkedIn
@@ -189,7 +190,7 @@ const Footer = () => {
           Resume
         </Link>
         !
-      </p>
+      </p> */}
       {!REDUCE_MOTION ? (
         <p class="italic text-gray-400">
           P.S. Try ejecting the page!
@@ -275,7 +276,7 @@ const Content = () => {
   }
 
   return (
-    <div class="whitespace-normal hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none">
+    <div class="whitespace-normal hidden flex-col text-xl bg-slate-100 text-gray-700 font-normal transition motion-reduce:transition-none min-h-screen">
       <div class="transition-all sticky justify-between z-50 top-0 flex bg-blue-700 w-full h-10 hover:h-12 text-white font-mono motion-reduce:transition-none duration-1000">
         {spinner}
         {timer}

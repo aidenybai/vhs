@@ -30,6 +30,11 @@
   background-position: center;
 }
 
+strike {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 @-moz-keyframes spin {
   from {
     -moz-transform: rotate(0deg);
