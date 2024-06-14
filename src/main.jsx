@@ -69,25 +69,21 @@ const Header = () => {
       </h4>
       <p>
         Right now, I'm building{' '}
-        <Link href="https://million.dev">Million.js</Link> <Link href="https://www.ycombinator.com/companies/million-js">(YC W24)</Link>: The
-        copilot for web performance. My hope is that one day,
-        we'll be able to learn, create, and collaborate{' '}
-        <span class="italic">faster</span> on the web.
+        <Link href="https://million.dev">Million</Link>{' '}
+        <Link href="https://www.ycombinator.com/companies/million-js">
+          (YC W24)
+        </Link>
+        : An IDE extension that makes your site faster.
       </p>
       <p>
-        I'm also a <strike>serial lecture skipper</strike> student at the
-        Computer Science at the{' '}
+        I used to <strike>skip lectures</strike> go to the&nbsp;
         <Link href="https://www.uw.edu/">
           University of Washington
         </Link>
-        &nbsp;(currently on leave)
+        &nbsp;but I got bored lol
       </p>
       <p>
-        For fun, I like{' '}
-        <Link href="https://open.spotify.com/user/pc8oiwotonvqvkw61vimh0kks">
-          blasting music
-        </Link>{' '}
-        with my windows down on the highway, chugging{' '}
+        For fun, I like chugging{' '}
         <span title="Mango Kiwi with Lichee Jelly!">
           fruit tea boba
         </span>
